@@ -1,0 +1,515 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tickets-section {
+  flex: 2;
+}
+
+.status-section {
+  flex: 1;
+}
+
+.section-header {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* New responsive classes for components */
+
+/* Global font scaling for minimal design */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Navbar */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* Hidden by default on mobile, shown when toggled */
+  }
+
+  .nav-menu.mobile-open {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+}
+
+/* Banner */
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner-card {
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+  background-size: cover, cover;
+  background-position: center, center;
+  background-blend-mode: soft-light;
+  font-size: 1.125rem; /* 18px */
+}
+
+.banner-card .count {
+  font-size: 3.5rem; /* 56px */
+  font-weight: 800;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .banner-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .banner-card {
+    height: auto;
+    padding: 1.5rem;
+    font-size: 1rem; /* 16px */
+  }
+
+  .banner-card .count {
+    font-size: 2.25rem; /* 36px */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-card {
+    padding: 1rem;
+  }
+
+  .banner-card .count {
+    font-size: 1.875rem; /* 30px */
+  }
+}
+
+/* TicketsGrid */
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .tickets-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* TicketCard */
+.ticket-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  cursor: pointer;
+  font-size: 1rem; /* 16px base */
+}
+
+.ticket-card h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+}
+
+.ticket-card p {
+  margin: 2px 0 10px 0;
+  color: #4b5563;
+  font-size: 0.875rem; /* 14px */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ticket-card .bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8125rem; /* 13px */
+}
+
+.ticket-card .status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 600;
+  min-width: 86px;
+  justify-content: center;
+}
+
+.ticket-card .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.ticket-card .left-bottom {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.ticket-card .id {
+  color: #6b7280;
+}
+
+.ticket-card .priority {
+  font-weight: 700;
+}
+
+.ticket-card .right-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b7280;
+}
+
+.ticket-card .date-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ticket-card .icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem; /* 12px */
+  color: #6b7280;
+  background: #fff;
+}
+
+@media (max-width: 480px) {
+  .ticket-card {
+    padding: 12px;
+  }
+
+  .ticket-card h3 {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .ticket-card p {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .ticket-card .bottom-row {
+    font-size: 0.75rem; /* 12px */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .ticket-card .status-badge {
+    font-size: 0.75rem;
+    min-width: 76px;
+    padding: 4px 8px;
+  }
+
+  .ticket-card .left-bottom,
+  .ticket-card .right-bottom {
+    gap: 8px;
+  }
+
+  .ticket-card .icon {
+    width: 18px;
+    height: 18px;
+    font-size: 0.6875rem; /* 11px */
+  }
+}
+
+/* TaskStatus */
+.task-item {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.task-item h4 {
+  color: #1f2937;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.task-item button {
+  width: 100%;
+  background-color: #16a34a;
+  border: 1px solid #16a34a;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .task-item {
+    padding: 12px;
+  }
+
+  .task-item button {
+    padding: 8px 10px;
+    font-size: 0.875rem;
+  }
+}
+
+/* ResolvedTasks */
+.resolved-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.resolved-item .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resolved-item .title {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.resolved-item .status {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .resolved-item {
+    padding: 10px;
+  }
+
+  .resolved-item .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* Footer */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-heading {
+  margin: 0 0 12px 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.25rem; /* 20px */
+}
+
+.footer-subheading {
+  margin: 0 0 16px 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list-item {
+  margin-bottom: 12px;
+  color: #c7c7c7;
+  cursor: default;
+}
+
+.footer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #5b5b5b;
+  margin-right: 10px;
+  font-size: 0.75rem; /* 12px */
+  color: #e5e5e5;
+  flex: 0 0 28px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 16px;
+  color: #b5b5b5;
+  font-size: 0.875rem; /* 14px */
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .footer-heading {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .footer-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.6875rem; /* 11px */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    gap: 16px;
+  }
+
+  .footer-heading {
+    font-size: 1rem; /* 16px */
+  }
+
+  .footer-list-item {
+    font-size: 0.875rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8125rem; /* 13px */
+  }
+}
+
+/* Enhanced existing media queries */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .section-header {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .tickets-section,
+  .status-section {
+    flex: none;
+  }
+
+  nav {
+    padding: 0.25rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-menu {
+    gap: 1rem;
+  }
+
+  .section-header {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  nav {
+    padding: 0.25rem 0.75rem;
+  }
+
+  .section-header {
+    font-size: 1rem;
+  }
+}

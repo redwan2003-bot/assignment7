@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# CS - Ticket System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React-based customer support ticket management website. Features include ticket listing, moving tickets to in-progress, completing tasks, and toast notifications using React-Toastify.
 
-## Available Scripts
+## Setup Instructions
 
-In the project directory, you can run:
+1. Navigate to the project directory:
+   ```
+   cd ticket-system
+   ```
 
-### `npm start`
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Start the development server:
+   ```
+   npm start
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app will open at http://localhost:3000.
 
-### `npm test`
+## React Concepts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### What is JSX, and why is it used?
+JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code within JavaScript. It is used in React to describe the UI in a declarative way, making components easier to create and read. JSX is transpiled to regular JavaScript function calls (e.g., React.createElement) by tools like Babel.
 
-### `npm run build`
+### What is the difference between State and Props?
+- **State**: Internal data managed within a component. It is mutable and can be updated using hooks like useState, triggering re-renders when changed. State is private to the component.
+- **Props**: Short for "properties," props are read-only data passed from a parent component to a child component. They allow data sharing down the component tree but cannot be modified by the child.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### What is the useState hook, and how does it work?
+The useState hook is a React hook that adds state to functional components. It takes an initial state value and returns an array with two elements: the current state value and a setter function to update it. When the setter is called, React re-renders the component with the new state. Example:
+```jsx
+const [count, setCount] = useState(0);
+setCount(count + 1); // Updates count and re-renders
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How can you share state between components in React?
+- **Lift state up**: Move the state to the nearest common ancestor component and pass it down via props (and callbacks for updates).
+- **Context API**: Use React.createContext() to create a context, provide the state with <MyContext.Provider>, and consume it in child components with useContext.
+- **State management libraries**: Like Redux or Zustand for complex global state sharing across the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### How is event handling done in React?
+Event handling in React uses camelCase event names (e.g., onClick) attached to JSX elements. Handlers are functions passed as props. React uses synthetic events for cross-browser compatibility. Example:
+```jsx
+<button onClick={(e) => handleClick(e)}>Click me</button>
+function handleClick(e) {
+  e.preventDefault(); // If needed
+  // Handle logic
+}
