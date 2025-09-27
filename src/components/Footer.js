@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-grid">
           <div style={{ maxWidth: '100%' }}>
-            <h3 className="footer-heading">CS — Ticket System</h3>
+            <h3 className="footer-heading" style={{ whiteSpace: 'nowrap' }}>CS — Ticket System</h3>
             <p style={{ margin: 0, lineHeight: 1.7, color: '#bdbdbd', overflowWrap: 'break-word', wordBreak: 'break-word', maxWidth: '100%' }}>
               CS - Ticket System is a comprehensive platform for managing customer support tickets. Streamline your support workflow with features like ticket tracking, status updates, and real-time notifications to ensure efficient customer service and quick resolutions.
             </p>
@@ -41,8 +41,8 @@ const Footer = () => {
 
           <div>
             <h4 className="footer-subheading">Social Links</h4>
-            <ul className="footer-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', maxWidth: '100%', flexWrap: 'wrap' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <ul className="footer-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', maxWidth: '100%', flexWrap: 'nowrap', whiteSpace: 'nowrap' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'nowrap' }}>
                 <span aria-hidden="true" style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -57,7 +57,7 @@ const Footer = () => {
                 }}>X</span>
                 <span style={{ color: '#cfcfcf', fontSize: '14px' }}>@CS — Ticket System</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'nowrap' }}>
                 <span aria-hidden="true" style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -72,7 +72,7 @@ const Footer = () => {
                 }}>in</span>
                 <span style={{ color: '#cfcfcf', fontSize: '14px' }}>@CS — Ticket System</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'nowrap' }}>
                 <span aria-hidden="true" style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -87,7 +87,7 @@ const Footer = () => {
                 }}>f</span>
                 <span style={{ color: '#cfcfcf', fontSize: '14px' }}>@CS — Ticket System</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'nowrap' }}>
                 <span aria-hidden="true" style={{
                   display: 'inline-flex',
                   alignItems: 'center',
