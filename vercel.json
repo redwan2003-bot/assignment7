@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd ticket-system && npm install && npm run build",
+  "outputDirectory": "ticket-system/build",
+  "framework": "create-react-app",
+  "rootDirectory": "ticket-system"
+}
