@@ -12,14 +12,13 @@ const Navbar = ({ onNewTicket }) => {
       backgroundColor: '#ffffff',
       boxShadow: '0px 3px 8px rgba(0, 0, 0, 0.1)',
       color: 'black',
-      padding: '0.25rem 1rem',
+      padding: '0.25rem 2rem',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      fontSize: '1rem',
-      flexWrap: 'wrap'
+      fontSize: '1rem'
     }}>
-      <div style={{ fontWeight: 'bold', fontSize: '1.25rem', flexWrap: 'wrap' }}>
+      <div style={{ fontWeight: 'bold', fontSize: '1.25rem'}}>
         CS - Ticket System
       </div>
       <div style={{ flex: 1, display: 'flex', justifyContent: 'center', position: 'relative' }}>
@@ -31,7 +30,7 @@ const Navbar = ({ onNewTicket }) => {
           <li style={{ cursor: 'pointer' }}>Download</li>
           <li style={{ cursor: 'pointer' }}>Contact</li>
         </ul>
-        <button className="hamburger" onClick={toggleMenu}>
+        <button className="hamburger" onClick={toggleMenu} style={{ display: 'none' }}>
           ☰
         </button>
       </div>
