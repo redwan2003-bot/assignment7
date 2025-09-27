@@ -9,7 +9,7 @@ const cardStyle = (from, to) => ({
 
 const Banner = ({ inProgressCount, resolvedCount }) => {
   return (
-    <div style={{ padding: '0 2rem', marginTop: '1rem', marginBottom: '1.5rem' }}>
+    <div style={{ padding: '0 1rem', marginTop: '1rem', marginBottom: '1.5rem' }}>
       <div className="banner-grid">
         <div className="banner-card" style={cardStyle('#7C3AED', '#6366F1')}>
           <div style={{ opacity: 0.95 }}>In-Progress</div>
