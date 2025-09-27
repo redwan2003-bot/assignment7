@@ -2,12 +2,12 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: '#0d0d0d', color: '#cfcfcf', padding: '80px 80px 80px', marginTop: '64px', gap: '80px', position: 'relative', width: '100%', display: 'flex', flexDirection: 'column', alignItem: 'flex-start' }}>
+    <footer style={{ backgroundColor: '#0d0d0d', color: '#cfcfcf', padding: '2rem 0', marginTop: '64px', position: 'relative', width: '100%', maxWidth: '100%', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <div className="footer-container">
         <div className="footer-grid">
-          <div>
-            <h3 className="footer-heading">CS — Ticket System</h3>
-            <p style={{ margin: 0, lineHeight: 1.7, color: '#bdbdbd' }}>
+          <div style={{ maxWidth: '100%' }}>
+            <h3 className="footer-heading" style={{ whiteSpace: 'nowrap' }}>CS — Ticket System</h3>
+            <p style={{ margin: 0, lineHeight: 1.7, color: '#bdbdbd', overflowWrap: 'break-word', wordBreak: 'break-word', maxWidth: '100%' }}>
               CS - Ticket System is a comprehensive platform for managing customer support tickets. Streamline your support workflow with features like ticket tracking, status updates, and real-time notifications to ensure efficient customer service and quick resolutions.
             </p>
           </div>
@@ -41,72 +41,72 @@ const Footer = () => {
 
           <div>
             <h4 className="footer-subheading">Social Links</h4>
-            <ul className="footer-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <ul className="footer-list" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', maxWidth: '100%', flexWrap: 'nowrap', whiteSpace: 'nowrap' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'nowrap' }}>
                 <span aria-hidden="true" style={{
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  width: 28,
-                  height: 28,
+                  width: 24,
+                  height: 24,
                   borderRadius: '50%',
                   border: '1px solid #5b5b5b',
-                  fontSize: 12,
+                  fontSize: 11,
                   color: '#e5e5e5',
                   flexShrink: 0
                 }}>X</span>
-                <span style={{ color: '#cfcfcf', fontSize: '14px', whiteSpace: 'nowrap' }}>@CS — Ticket System</span>
+                <span style={{ color: '#cfcfcf', fontSize: '14px' }}>@CS — Ticket System</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'nowrap' }}>
                 <span aria-hidden="true" style={{
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  width: 28,
-                  height: 28,
+                  width: 24,
+                  height: 24,
                   borderRadius: '50%',
                   border: '1px solid #5b5b5b',
-                  fontSize: 12,
+                  fontSize: 11,
                   color: '#e5e5e5',
                   flexShrink: 0
                 }}>in</span>
-                <span style={{ color: '#cfcfcf', fontSize: '14px', whiteSpace: 'nowrap' }}>@CS — Ticket System</span>
+                <span style={{ color: '#cfcfcf', fontSize: '14px' }}>@CS — Ticket System</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'nowrap' }}>
                 <span aria-hidden="true" style={{
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  width: 28,
-                  height: 28,
+                  width: 24,
+                  height: 24,
                   borderRadius: '50%',
                   border: '1px solid #5b5b5b',
-                  fontSize: 12,
+                  fontSize: 11,
                   color: '#e5e5e5',
                   flexShrink: 0
                 }}>f</span>
-                <span style={{ color: '#cfcfcf', fontSize: '14px', whiteSpace: 'nowrap' }}>@CS — Ticket System</span>
+                <span style={{ color: '#cfcfcf', fontSize: '14px' }}>@CS — Ticket System</span>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'nowrap' }}>
                 <span aria-hidden="true" style={{
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  width: 28,
-                  height: 28,
+                  width: 24,
+                  height: 24,
                   borderRadius: '50%',
                   border: '1px solid #5b5b5b',
-                  fontSize: 12,
+                  fontSize: 11,
                   color: '#e5e5e5',
                   flexShrink: 0
                 }}>✉</span>
-                <span style={{ color: '#cfcfcf', fontSize: '14px', whiteSpace: 'nowrap' }}>support@cst.com</span>
+                <span style={{ color: '#cfcfcf', fontSize: '14px' }}>support@cst.com</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div style={{ borderTop: '1px solid #2a2a2a', marginTop: '40px' }} />
+        <div style={{ borderTop: '1px solid #2a2a2a', marginTop: '40px', width: '100%' }} />
         <div className="footer-bottom">
           © 2025 CS — Ticket System. All rights reserved.
         </div>
